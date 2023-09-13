@@ -4,8 +4,13 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+}
+
 .header {
-  background: rgba(160, 79, 79, 0.72);
+  background: #a04f4fb8;
   width: 100%;
   height: 70px;
   padding: 0 24px;
@@ -23,7 +28,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 12px 24px;
+  padding: 26px 24px;
 }
 
 .login {
@@ -31,9 +36,64 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background-color: rgb(142, 67, 67);
   width: 100%;
   color: white;
   border-radius: 4px;
   padding: 24px 48px;
+  gap: 15px;
+}
+
+.user {
+  width: 100%;
+  outline: double;
+  padding: 7px;
+}
+
+.password {
+  width: 100%;
+  outline: double;
+  padding: 7px;
+}
+
+.button-56 {
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-weight: 900;
+}
+
+.button-56:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
+
+.footer {
+  width: 100%;
+  background-color: #a04f4fb8;
+  padding: 0 24px;
+  position: relative;
+  height: 100vh;
 }
