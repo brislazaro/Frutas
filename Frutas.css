@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --header-height: 70px;
+  --footer-height: 50px;
+}
+
 body {
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
@@ -12,7 +17,7 @@ body {
 .header {
   background: #a04f4fb8;
   width: 100%;
-  height: 70px;
+  height: var(--header-height);
   padding: 0 24px;
   display: flex;
   justify-content: space-between;
@@ -42,6 +47,7 @@ body {
   border-radius: 4px;
   padding: 24px 48px;
   gap: 15px;
+  max-width: 350px;
 }
 
 .user {
@@ -92,7 +98,7 @@ body {
 
 .footer {
   width: 100%;
-  height: 50px;
+  height: var(--footer-height);
   background-color: #a04f4fb8;
   padding: 0 24px;
   position: relative;
@@ -101,4 +107,32 @@ body {
   align-items: center;
   position: absolute;
   bottom: 0;
+}
+
+@media screen and (min-width: 900px) {
+  .header {
+    background-color: #a359a39d;
+  }
+
+  .login {
+    background-color: #e883b24f;
+    color: black;
+  }
+
+  .footer {
+    background-color: #a359a39d;
+  }
+
+  .button-56 {
+    background-color: #a359a39d;
+  }
+
+  .page-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    height: calc(100vh - var(--header-height) - var(--footer-height));
+  }
 }
