@@ -1,0 +1,101 @@
+.products-title {
+  margin-bottom: 12px;
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  width: 100%;
+  align-items: center;
+  max-width: 400px;
+}
+
+.products__item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 18px 24px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.products__item--product {
+  justify-content: space-between;
+}
+
+.item__name {
+  font-weight: 500;
+  color: palevioletred;
+}
+
+.item__button {
+  background-color: #d475c6;
+  border-radius: 3px;
+  border: 1px solid #c54abc;
+  box-shadow: rgba(195, 82, 186, 0.7) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #fffafa;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans",
+    sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px 0.8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.item__button:hover,
+.item__button:focus {
+  background-color: #b3d3ea;
+  color: #2c5777;
+}
+
+.item__button:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
+}
+
+.item__button:active {
+  background-color: #a0c7e4;
+  box-shadow: none;
+  color: #2c5777;
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  width: 100%;
+  align-items: center;
+  max-width: 400px;
+}
+
+.cart__item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px 24px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  gap: 12px;
+}
+
+.item__buttons {
+  display: flex;
+  gap: 6px;
+}

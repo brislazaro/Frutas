@@ -5,13 +5,14 @@
 }
 
 :root {
-  --header-height: 70px;
+  --header-height: 80px;
   --footer-height: 50px;
 }
 
 body {
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
+  background-color: #f7f7f7;
 }
 
 .header {
@@ -25,7 +26,7 @@ body {
 }
 
 .logo {
-  height: 70px;
+  height: 65px;
 }
 
 .page-container {
@@ -34,32 +35,20 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 26px 24px;
+  gap: 15px;
 }
 
-.login {
+.footer {
+  width: 100%;
+  height: var(--footer-height);
+  background-color: #a04f4fb8;
+  padding: 0 24px;
+  position: relative;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(142, 67, 67);
-  width: 100%;
-  color: white;
-  border-radius: 4px;
-  padding: 24px 48px;
-  gap: 15px;
-  max-width: 350px;
-}
-
-.user {
-  width: 100%;
-  outline: double;
-  padding: 7px;
-}
-
-.password {
-  width: 100%;
-  outline: double;
-  padding: 7px;
+  position: absolute;
+  bottom: 0;
 }
 
 .button-56 {
@@ -96,34 +85,12 @@ body {
   outline: 0;
 }
 
-.footer {
-  width: 100%;
-  height: var(--footer-height);
-  background-color: #a04f4fb8;
-  padding: 0 24px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
-}
-
 @media screen and (min-width: 900px) {
   .header {
     background-color: #a359a39d;
   }
 
-  .login {
-    background-color: #e883b24f;
-    color: black;
-  }
-
   .footer {
-    background-color: #a359a39d;
-  }
-
-  .button-56 {
     background-color: #a359a39d;
   }
 
@@ -134,5 +101,9 @@ body {
     gap: 20px;
     align-items: center;
     height: calc(100vh - var(--header-height) - var(--footer-height));
+  }
+
+  .button-56 {
+    background-color: #a359a39d;
   }
 }
