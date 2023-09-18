@@ -13,6 +13,7 @@ body {
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
   background-color: #f7f7f7;
+  overflow-x: hidden;
 }
 
 .header {
@@ -43,12 +44,15 @@ body {
   height: var(--footer-height);
   background-color: #a04f4fb8;
   padding: 0 24px;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
   bottom: 0;
+}
+
+.footer--static {
+  position: static;
 }
 
 .button-56 {
@@ -99,8 +103,14 @@ body {
     flex-direction: row;
     justify-content: center;
     gap: 20px;
-    align-items: center;
+    align-items: flex-start;
     height: calc(100vh - var(--header-height) - var(--footer-height));
+  }
+
+  .page-container--login {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   .button-56 {
