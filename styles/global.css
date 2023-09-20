@@ -37,6 +37,7 @@ body {
   align-items: center;
   padding: 26px 24px;
   gap: 15px;
+  overflow-y: auto;
 }
 
 .footer {
@@ -52,7 +53,7 @@ body {
 }
 
 .footer--static {
-  position: static;
+  position: unset;
 }
 
 .button-56 {
