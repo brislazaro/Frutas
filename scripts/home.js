@@ -72,6 +72,20 @@ const cart = [
   },
 ];
 
+function calculateAndUpdatePrice() {
+  const priceAmountEl = document.querySelector(".price__amount");
+
+  let totalPrice = 0;
+
+  for (let i = 0; i < cart.length; i++) {
+    const element = cart[i];
+
+    totalPrice = totalPrice + element.quantity * element.price;
+  }
+
+  priceAmountEl.innerHTML = `${totalPrice} euros`;
+}
+
 const cartListEl = document.querySelector(".cart");
 
 for (let i = 0; i < cart.length; i++) {
@@ -101,25 +115,27 @@ for (let i = 0; i < cart.length; i++) {
   itemButtonLess.classList.add("item__button");
   itemButtonLess.innerHTML = "-1";
 
+  itemButtonLess.addEventListener("click", () => {
+    currentItem.quantity = currentItem.quantity - 1;
+    itemQuantity.innerHTML = currentItem.quantity;
+    calculateAndUpdatePrice();
+  });
+
   buttonItem.appendChild(itemButtonLess);
 
   const itemButtonPlus = document.createElement("button");
   itemButtonPlus.classList.add("item__button");
   itemButtonPlus.innerHTML = "+1";
 
+  itemButtonPlus.addEventListener("click", () => {
+    currentItem.quantity = currentItem.quantity + 1;
+    itemQuantity.innerHTML = currentItem.quantity;
+    calculateAndUpdatePrice();
+  });
+
   buttonItem.appendChild(itemButtonPlus);
 
   cartListEl.appendChild(itemCart);
 }
 
-const priceAmountEl = document.querySelector(".price__amount");
-
-let totalPrice = 0;
-
-for (let i = 0; i < cart.length; i++) {
-  const element = cart[i];
-
-  totalPrice = totalPrice + element.quantity * element.price;
-}
-
-priceAmountEl.innerHTML = `${totalPrice} euros`;
+calculateAndUpdatePrice();
