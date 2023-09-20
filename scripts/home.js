@@ -68,7 +68,7 @@ const cart = [
   {
     name: "Huevos",
     price: 1,
-    quantity: 2,
+    quantity: 5,
   },
 ];
 
@@ -111,3 +111,15 @@ for (let i = 0; i < cart.length; i++) {
 
   cartListEl.appendChild(itemCart);
 }
+
+const priceAmountEl = document.querySelector(".price__amount");
+
+let totalPrice = 0;
+
+for (let i = 0; i < cart.length; i++) {
+  const element = cart[i];
+
+  totalPrice = totalPrice + element.quantity * element.price;
+}
+
+priceAmountEl.innerHTML = `${totalPrice} euros`;
